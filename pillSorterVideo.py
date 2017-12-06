@@ -52,14 +52,16 @@ while True:
         else:
             print(" --- ")
 
+    # If we found orange, move the servo
+    if orange:
+        print("do stuff here")
+        # call servo function here
+        print("wait for 100 msec")
+        cv2.waitKey(1000)
+
     cv2.imshow("maskClose", maskClose)
     cv2.imshow("maskOpen", maskOpen)
     cv2.imshow("mask", mask)
     cv2.imshow("cam", img)
-
-    # If we found orange, move the servo
-    if orange:
-        print("do stuff here")
-        break;
 
     cv2.waitKey(10)
